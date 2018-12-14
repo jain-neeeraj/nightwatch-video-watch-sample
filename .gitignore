@@ -1,0 +1,23 @@
+# Coverage directory
+reports
+
+# Dependency directory
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+# Debug log from selenium
+selenium-debug.log
+
+#Ignoring idea files
+.DS_Store
+
+.idea/
+package-lock.json
+
+# ignore visual studio codes
+.vscode
+
+#ignore screenshot directory
+screenshots

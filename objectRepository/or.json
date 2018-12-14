@@ -1,0 +1,11 @@
+{
+    "loginPage": {
+        "inputUsername": "#username",
+        "inputPassword": "//input[@name='password']",
+        "btnSignIn": ".btn.btn-rose",
+        "labelBadgeName": ".headline"
+    },
+    "videoPage":{
+        "playButton": ".noselect.showPlayButton"
+    }
+}

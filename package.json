@@ -1,0 +1,46 @@
+{
+  "name": "Test-Video",
+  "version": "1.0.0",
+  "description": "Automation-Test-Suite",
+  "main": "nightwatch.conf.js",
+  "scripts": {
+    "e2e-test-debug": "node --inspect node_modules/nightwatch/bin/nightwatch --retries 3 ",
+    "e2e-test": "node  node_modules/nightwatch/bin/nightwatch --retries 5",
+    "e2e-test:chrome": "cross-env TEST_ENV='QA'  npm run e2e-test -- --env chrome   --skiptags skip",
+    "e2e-test:chromeheadless": " npm run e2e-test -- --env chromeheadless --skiptags skip",
+    "e2e-test:chromelocal": "cross-env TEST_ENV='INT' npm run e2e-tests -- --env chrome --tag Desktop && npm run poste2e-test || npm run poste2e-test ",
+    "e2e-test:chromemobileheadless": "npm run e2e-test -- --env chromemobileheadless --tag mobile ",
+    "e2e-test:chromemobile": "npm run e2e-test -- --env chromemobile --tag mobile || npm run poste2e-test",
+    "e2e-test:firefox": "npm run e2e-test -- --env firefox",
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome",
+    "api-smoke-tests": "npm run e2e-test -- --tag @smoke-tests",
+    "poste2e-test": "node create-html-report.js",
+    "test-db": "npm run hookbase"
+  },
+  "author": "Automators",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "",
+    "chromedriver": "",
+    "cross-env": "",
+    "cucumber": "^3.0.3",
+    "cucumber-html-reporter": "3.0.4",
+    "geckodriver": "^1.8.1",
+    "multiple-cucumber-html-reporter": "^1.10.2",
+    "nightwatch": "^0.9.16",
+    "nightwatch-cucumber": "^8.2.2",
+    "selenium-download": "",
+    "selenium-server": "",
+    "xmlhttprequest": ""
+  },
+  "keywords": [
+    "nightwatch",
+    "testing",
+    "front-end",
+    "UI",
+    "browser"
+  ],
+  "dependencies": {
+    "browsermob-proxy-api": "^0.4.0"
+  }
+}
